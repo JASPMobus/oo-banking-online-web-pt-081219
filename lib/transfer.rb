@@ -19,9 +19,9 @@ class Transfer
       @status = "complete"
       
       return nil
-    elsif !self.valid?
-      @status = "rejected"
-      "Transaction rejected. Please check your account balance."
     end
+    
+    @status = "rejected"
+    "Transaction rejected. Please check your account balance."
   end
 end
