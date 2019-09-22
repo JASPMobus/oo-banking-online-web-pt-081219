@@ -13,7 +13,7 @@ class Transfer
   end
     
   def execute_transaction
-    if @status != "complete" && @status != "rejected" && @status != "reversed"
+    if @status != "complete" && @status != "rejected" && @status != "reversed" && self.valid?
       sender.balance -= amount
       receiver.balance += amount
       @status = "complete"
