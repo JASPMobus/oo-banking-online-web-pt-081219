@@ -16,7 +16,7 @@ class Transfer
     if self.valid? && @status == "pending"
       sender.balance -= amount
       receiver.balance += amount
-      @status = "processed"
+      @status = "complete"
     end
   end
 end
