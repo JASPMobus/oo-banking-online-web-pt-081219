@@ -18,7 +18,7 @@ class Transfer
       receiver.balance += amount
       @status = "complete"
       
-      break
+      return nil
     elsif !self.valid?
       @status = "rejected"
       "Transaction rejected. Please check your account balance."
